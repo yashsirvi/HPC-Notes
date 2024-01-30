@@ -54,7 +54,13 @@ export LD_LIBRARY_PATH="$L:$HOME/centos/usr/lib:$HOME/centos/usr/lib64"
 # Modules
 - Use `module avail` to see all available modules
 - Use `module load <module_name>` to load a module
-- Latest cuda version installed is 11.7 so don't just `pip install torch`. You'll have to compile torch with correct cuda version. Use `module load compiler/cuda/11.7` in your job script before submitting the job on gpu nodes.
+- Latest cuda version installed is 11.7 so don't just `pip install torch`. You'll have to compile torch with correct cuda version. Use `module load compiler/cuda/11.7` in your job script before submitting the job on gpu nodes. see: https://pytorch.org/get-started/previous-versions/
+
+eg for cuda 11.7 :
+```bash
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+
 - Find the available modules [here](./module_avail_jan_2024.txt) (as of Jan 2024)
 
 # Installing MuJoCo
