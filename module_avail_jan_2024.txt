@@ -1,0 +1,108 @@
+
+---------------------------------------------------- /opt/ohpc/pub/modulefiles ----------------------------------------------------
+   apps/abaqus/2021/gnu                                              apps/wrf/4.0.3/intel
+   apps/abaqus/2021/intel                                     (D)    compiler/cmake/3.15.4
+   apps/abaqus/6.14/gnu                                              compiler/cmake/3.22.5                   (D)
+   apps/abaqus/6.14/intel                                     (D)    compiler/cuda/cuda10.0-test
+   apps/abinit/8.10.1/intel                                          compiler/cuda/7.0
+   apps/ansys/2019r3/AllModules                                      compiler/cuda/8.0
+   apps/ansys/2019r3/fluent                                          compiler/cuda/9.0-test
+   apps/ansys/2019r3/forte                                           compiler/cuda/9.0
+   apps/ansys/2019r3/mapdl                                    (D)    compiler/cuda/9.2
+   apps/ansys/2020r2/AllModules                                      compiler/cuda/10.0
+   apps/ansys/2021r2/AllModules                                      compiler/cuda/10.1
+   apps/ansys/2022r2/AllModules                                      compiler/cuda/10.2
+   apps/ansys/2023r2/AllModules                                      compiler/cuda/11.0
+   apps/athena/4.2/intel                                             compiler/cuda/11.2
+   apps/bowtie2/2.3.5.1/intel                                        compiler/cuda/11.7                      (D)
+   apps/clustalw/2.1/intel                                           compiler/cudnn/7.0.5
+   apps/cp2k/6.2/intel                                               compiler/cudnn/7.2.1
+   apps/cp2k/8.2/gpu                                                 compiler/cudnn/7.4.2
+   apps/cp2k/8.2/intel                                        (D)    compiler/cudnn/7.5.1
+   apps/dtcraft/v0.1                                                 compiler/cudnn/7.6.2
+   apps/fds/6.7.1/intel                                              compiler/cudnn/8.1.0                    (D)
+   apps/gaussian/16/gnu                                              compiler/gcc/5.5.0
+   apps/grads/2.2.1                                                  compiler/gcc/8.3.0
+   apps/gromacs/15.2.2019/intel                                      compiler/gcc/10.2.0                     (D)
+   apps/gromacs/2020/cpu                                             compiler/intel-mnt/2016.4.258
+   apps/gromacs/2020/gpu_cuda_10.1                            (D)    compiler/intel-mnt/2018.2.199
+   apps/gromacs/2022/cpu                                             compiler/intel-mnt/2018.5.274
+   apps/gromacs/2022/gpu                                      (D)    compiler/intel-mnt/2019.4.243
+   apps/gromos/1.4.1/intel                                           compiler/intel-mnt/2019.5.281           (D)
+   apps/hmmer/3.2.1/intel                                            compiler/intel-mpi/mpi-2016
+   apps/lammps/14Dec2021/impi2020v4/cpu                              compiler/intel-mpi/mpi-2018.2.199
+   apps/lammps/29Oct2020/cuda10.2/gpu                                compiler/intel-mpi/mpi-2019-v4
+   apps/lammps/29Oct2020/impi2020v4/cpu                              compiler/intel-mpi/mpi-2019-v5
+   apps/lammps/7Aug19/intel                                          compiler/intel-mpi/mpi-2020-v4          (D)
+   apps/matlab/R2019b                                                compiler/intel/2016.4.258
+   apps/matlab/R2020bu4                                              compiler/intel/2018.2.199
+   apps/matlab/R2021b                                                compiler/intel/2018.5.274
+   apps/matlab/R2022a                                         (D)    compiler/intel/2019.5.281
+   apps/mdynamix/5.2.8                                               compiler/intel/2020.4.304
+   apps/meep/1.8.0/intel                                             compiler/intel/2021/mpi/oneapi-2021.4.0
+   apps/meme/5.0.4/intel                                             compiler/intel/2021/oneapi-2021.4.0
+   apps/moil/12/intel                                                compiler/intel/2022/mpi/oneapi-2021.5.1
+   apps/mom6/intel                                                   compiler/intel/2022/oneapi-2022.0.2
+   apps/mpiblast/1.6.0/intel                                         compiler/mpi4py/mpi4py
+   apps/mpifileutils/v0.11.1/oneapi                                  compiler/nvhpc-byo-compiler/20.7
+   apps/mummer/3.23/intel                                            compiler/nvhpc-byo-compiler/21.3        (D)
+   apps/namd/2.12/impi2018/cpu                                       compiler/nvhpc-nompi/20.7
+   apps/namd/2.12/impi2018/cuda                               (D)    compiler/nvhpc-nompi/21.3               (D)
+   apps/namd/2.13/impi2019v5/cpu                                     compiler/nvhpc/20.7
+   apps/namd/2.13/impi2019v5/cuda                             (D)    compiler/nvhpc/21.3
+   apps/namd/2.14/impi2020v4/cpu                                     compiler/nvhpc/22.5                     (D)
+   apps/namd/2.14/impi2020v4/cuda                             (D)    compiler/openmpi/3.1.0/gnu
+   apps/nektor/4.4.1/intel                                           compiler/openmpi/4.0.1
+   apps/neper/4.6/4.6                                                compiler/openmpi/4.0.2
+   apps/nwchem/6.8.1/intel                                           compiler/openmpi/4.1.6
+   apps/ohpc                                                         compiler/openmpi/cuda/4.1.4
+   apps/openSTA/openSTA                                              compiler/pgi/19.4
+   apps/openTimer/openTimer                                          compiler/pgi/2019
+   apps/openfoam/2.4.0/intel                                         compiler/pgi/PrgEnv-pgi/19.4
+   apps/openfoam/4.1/intel                                           compiler/pgi/openmpi/3.1.3/2019
+   apps/openfoam/6.0/intel                                           compiler/pgi/pgi-llvm
+   apps/openfoam/8.0/intel                                           compiler/pgi/pgi-nollvm
+   apps/openfoam/9.0/intel                                           compiler/pgi_19.10/PrgEnv-pgi/19.10
+   apps/or-tools/or-tools                                            compiler/pgi_19.10/openmpi/3.1.3/2019
+   apps/orca/4.2.1                                                   compiler/pgi_19.10/pgi-llvm
+   apps/orca/5.0.1                                            (D)    compiler/pgi_19.10/pgi-nollvm
+   apps/phylip/3.697/intel                                           compiler/pgi_19.10/pgi/19.10            (D)
+   apps/psi4/1.3.2/intel2019v5/cpu                                   compiler/pgi_19.10/pgi/2019
+   apps/python-package/gnuplot/5.2.8                                 lib/EasyBuild/3.9.4
+   apps/python-package/pmix/2.2.2                                    lib/autotools
+   apps/python-package/python/3.6                                    lib/charliecloud/0.11
+   apps/python-package/python/3.7.4                                  lib/charliecloud/0.22                   (D)
+   apps/python-package/python/conda-python/3.7_new                   lib/clustershell/1.8.2
+   apps/python-package/python/conda-python/3.7                (D)    lib/fftw2/2.1.5/intel-2019.5.281
+   apps/python-package/python/intelpython/2.7                        lib/fftw3/3.3.8/intel-2019.5.281
+   apps/python-package/python/intelpython/3.6                 (D)    lib/fftw3/3.3.8/intel2018               (D)
+   apps/python-package/tensorflow-intel/1.13.1_with_python2.7        lib/hdf5_parallel/1.8.21
+   apps/python-package/tensorflow-intel/1.13.1_with_python3.6 (D)    lib/hdf5_parallel/1.10.7                (D)
+   apps/python-package/tensorflow/cpu-1.12.0-with-python2.7          lib/hwloc/2.1.0
+   apps/python-package/tensorflow/cpu-1.12.0-with-python3.6          lib/intel/2021/mkl/oneapi-2021.4.0
+   apps/python-package/tensorflow/gpu-1.12.0-with-python2.7          lib/intel/2021/tbb/oneapi-2021.4.0
+   apps/python-package/tensorflow/gpu-1.12.0-with-python3.6   (D)    lib/intel/2022/mkl/oneapi-2022.0.2
+   apps/quantum_espresso/6.4.1/intel                                 lib/intel/2022/tbb/oneapi-2021.5.1
+   apps/quantum_espresso/6.8/intel                                   lib/lapack/3.11.0
+   apps/rapidCFD/4.1/openmpi/3.1.0                                   lib/llvm5/5.0.1
+   apps/rapids/0.18/gpu                                              lib/mutationpp/26.8.2019
+   apps/regcm/4.6.1/intel                                            lib/netcdf_c/4.3.3.1
+   apps/roms/3.6/intel                                               lib/netcdf_c/4.7.4                      (D)
+   apps/siesta/4.0.2/cpu                                             lib/netcdf_f/4.4.0
+   apps/siesta/4.1.5/cpu                                             lib/netcdf_f/4.5.2                      (D)
+   apps/singularity/3.4.1                                            lib/netcdf_parallel/1.8.1
+   apps/su2/6.2.0/intel                                              lib/netcdf_parallel/1.11.2              (D)
+   apps/su2/7.0.7                                                    lib/papi/5.7.0
+   apps/tinker/8.7/intel                                             lib/pmix/2.2.2
+   apps/turbomole/721/intel                                          lib/prun/1.3
+   apps/upc/2020.4.0                                                 lib/scalapack/2.1.0-intel-19.0.5.281
+   apps/vega/3.2.0/intel                                             lib/tcl/8.6.10/intel2018
+   apps/wrf-arwpostv3                                                lib/valgrind/3.15.0
+
+  Where:
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
