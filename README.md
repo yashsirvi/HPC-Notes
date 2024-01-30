@@ -59,6 +59,8 @@ export LD_LIBRARY_PATH="$L:$HOME/centos/usr/lib:$HOME/centos/usr/lib64"
 eg for cuda 11.7 :
 ```bash
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+# or use pip
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
 ```
 
 - Find the available modules [here](./module_avail_jan_2024.txt) (as of Jan 2024)
