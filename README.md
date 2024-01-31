@@ -100,8 +100,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 8. many ports are blocked so note down which port `(<PORT> above)` the jupyter kernel is actually listening on
 9. on your local machine, in a new shell make a tunnel by running `ssh -t -t <USER>@paramshakti.iitkgp.ac.in -L localhost:<PORT>:localhost:<PORT> ssh <USER>@<ip> -L localhost:<PORT>:localhost:<PORT>`
 10. open the link you copied in step 7 in a browser on your local machine
-11. ???
-12. profit
 
 # GPU node IPs
 1. **gpu021** (bad dns): `172.10.0.121`
