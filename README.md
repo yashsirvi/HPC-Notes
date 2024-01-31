@@ -89,7 +89,22 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 - `sinfo` to see nodes
 - `sinfo -s` to see nodes in a table
 
+# jupyter
+1. make sure your environment has `jupyter`
+2. submit an interactive bash job by running `srun -p gpu --time=<H>:<MM>:<SS> --gres=gpu:<num_gpus> --pty bash`
+3. activate your environment
+4. (optional) use `screen` to (detachably) multiplex the shell
+5. run `hostname -i` and note down your gpu node's IP, say as `ip` (if you don't know it already)
+6. run `jupyter notebook --port XXXX --no-browser`
+7. copy one of the full links (after Jupyter Server `<VER>` is running at:), e.g. `http://localhost:<PORT>/tree?token=<TOKEN>`
+8. many ports are blocked so note down which port `(<PORT> above)` the jupyter kernel is actually listening on
+9. on your local machine, in a new shell make a tunnel by running `ssh -t -t <USER>@paramshakti.iitkgp.ac.in -L localhost:<PORT>:localhost:<PORT> ssh <USER>@<ip> -L localhost:<PORT>:localhost:<PORT>`
+10. open the link you copied in step 7 in a browser on your local machine
+11. ???
+12. profit
 
+# GPU node IPs
+1. **gpu021** (bad dns): `172.10.0.121`
 ---
 
 kinda incomplete i'll update it as i learn more :p
