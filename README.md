@@ -77,7 +77,7 @@ rm mujoco210-linux-x86_64.tar.gz
 
 - add the following to your .bashrc or .zshrc
 ```bash
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/<user>/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 ``````
 - Install any missing dependencies using the script [install_rpm.py](./install_rpm.py)
