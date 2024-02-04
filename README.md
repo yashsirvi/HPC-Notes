@@ -101,6 +101,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 9. on your local machine, in a new shell make a tunnel by running `ssh -t -t <USER>@paramshakti.iitkgp.ac.in -L localhost:<PORT>:localhost:<PORT> ssh <USER>@<ip> -L localhost:<PORT>:localhost:<PORT>`
 10. open the link you copied in step 7 in a browser on your local machine
 
+# wandb
+- GPU nodes do not have access to the internet
+- Set wandb to offline mode using
+```bash
+    export WANDB_MODE=offline # on shell
+```
+```python
+    os.environ["WANDB_MODE"] = "offline" # in jupyter or inside a script
+    wandb.init( ...,  mode="offline")
+```
 # GPU node IPs
 1. **gpu021** (bad dns): `172.10.0.121`
 ---
