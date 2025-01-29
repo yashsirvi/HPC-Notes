@@ -65,6 +65,39 @@ pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
 
 - Find the available modules [here](./module_avail_jan_2024.txt) (as of Jan 2024)
 
+# Attaching another terminal to a running job
+You can use tmux with sessions or
+
+```bash
+srun --overlap --pty --jobid <jobid> /bin/bash
+```
+
+# Getting output from already running shell session in a job
+```
+sattach <jobnum>.<num> # change the num to 0, 1, ...
+# example: sattach 1167246.0
+```
+
+# Installing Latex
+- First download and extract the requried package
+```bash
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz --no-check-certificate
+zcat < install-tl-unx.tar.gz | tar xf -
+cd install-tl-*
+```
+
+- Create appropriate directories for the installation
+```bash
+mkdir -p ~/centos/usr/texlive/2024
+```
+
+- Run and installer but change the directories
+```bash
+perl ./install-tl
+# follow the instructions on the terminal to first change the installation directory from /usr/.. to ~/centos/usr...
+# Then return to main menu and continue installation
+```
+
 # Installing MuJoCo
 ```bash
 pip3 install -U 'mujoco-py<2.2,>=2.1' numpy scipy quaternion numpy-quaternion mujoco
@@ -111,8 +144,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
     os.environ["WANDB_MODE"] = "offline" # in jupyter or inside a script
     wandb.init( ...,  mode="offline")
 ```
-# GPU node IPs
-1. **gpu021** (bad dns): `172.10.0.121`
+
 ---
 
 kinda incomplete i'll update it as i learn more :p
