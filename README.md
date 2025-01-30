@@ -97,6 +97,7 @@ perl ./install-tl
 # follow the instructions on the terminal to first change the installation directory from /usr/.. to ~/centos/usr...
 # Then return to main menu and continue installation
 ```
+- Add the installed binary location (`~/centos/usr/texlive/2024/bin/x86_64-linux/`) to your PATH
 
 # Installing MuJoCo
 ```bash
