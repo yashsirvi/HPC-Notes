@@ -87,4 +87,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 kinda incomplete i'll update it as i learn more :p
 
 ---
-- Reference: http://www.hpc.iitkgp.ac.in/HPCF/paramShakti
+- Reference: https://hpc.iitkgp.ac.in/HPCF/paramShakti
