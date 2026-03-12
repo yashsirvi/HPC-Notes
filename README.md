@@ -54,8 +54,50 @@ export LD_LIBRARY_PATH="$L:$HOME/centos/usr/lib:$HOME/centos/usr/lib64"
 # Modules
 - Use `module avail` to see all available modules
 - Use `module load <module_name>` to load a module
-- Latest cuda version installed is 11.7 so don't just `pip install torch`. You'll have to compile torch with correct cuda version. Use `module load compiler/cuda/11.7` in your job script before submitting the job on gpu nodes.
+- Latest cuda version installed is 11.7 so don't just `pip install torch`. You'll have to compile torch with correct cuda version. Use `module load compiler/cuda/11.7` in your job script before submitting the job on gpu nodes. see: https://pytorch.org/get-started/previous-versions/
+
+eg for cuda 11.7 :
+```bash
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+# or use pip
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+```
+
 - Find the available modules [here](./module_avail_jan_2024.txt) (as of Jan 2024)
+
+# Attaching another terminal to a running job
+You can use tmux with sessions or
+
+```bash
+srun --overlap --pty --jobid <jobid> /bin/bash
+```
+
+# Getting output from already running shell session in a job
+```
+sattach <jobnum>.<num> # change the num to 0, 1, ...
+# example: sattach 1167246.0
+```
+
+# Installing Latex
+- First download and extract the requried package
+```bash
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz --no-check-certificate
+zcat < install-tl-unx.tar.gz | tar xf -
+cd install-tl-*
+```
+
+- Create appropriate directories for the installation
+```bash
+mkdir -p ~/centos/usr/texlive/2024
+```
+
+- Run and installer but change the directories
+```bash
+perl ./install-tl
+# follow the instructions on the terminal to first change the installation directory from /usr/.. to ~/centos/usr...
+# Then return to main menu and continue installation
+```
+- Add the installed binary location (`~/centos/usr/texlive/2024/bin/x86_64-linux/`) to your PATH
 
 # Installing MuJoCo
 ```bash
@@ -69,7 +111,7 @@ rm mujoco210-linux-x86_64.tar.gz
 
 - add the following to your .bashrc or .zshrc
 ```bash
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/<user>/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 ``````
 - Install any missing dependencies using the script [install_rpm.py](./install_rpm.py)
@@ -81,6 +123,28 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 - `sinfo` to see nodes
 - `sinfo -s` to see nodes in a table
 
+# jupyter
+1. make sure your environment has `jupyter`
+2. submit an interactive bash job by running `srun -p gpu --time=<H>:<MM>:<SS> --gres=gpu:<num_gpus> --pty bash`
+3. activate your environment
+4. (optional) use `screen` to (detachably) multiplex the shell
+5. run `hostname -i` and note down your gpu node's IP, say as `ip` (if you don't know it already)
+6. run `jupyter notebook --port XXXX --no-browser`
+7. copy one of the full links (after Jupyter Server `<VER>` is running at:), e.g. `http://localhost:<PORT>/tree?token=<TOKEN>`
+8. many ports are blocked so note down which port `(<PORT> above)` the jupyter kernel is actually listening on
+9. on your local machine, in a new shell make a tunnel by running `ssh -t -t <USER>@paramshakti.iitkgp.ac.in -L localhost:<PORT>:localhost:<PORT> ssh <USER>@<ip> -L localhost:<PORT>:localhost:<PORT>`
+10. open the link you copied in step 7 in a browser on your local machine
+
+# wandb
+- GPU nodes do not have access to the internet
+- Set wandb to offline mode using
+```bash
+    export WANDB_MODE=offline # on shell
+```
+```python
+    os.environ["WANDB_MODE"] = "offline" # in jupyter or inside a script
+    wandb.init( ...,  mode="offline")
+```
 
 ---
 
